@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+</head>
+<body>
+    <h1>BMI calculator</h1>
+    <div>
+        <form class="pure-form" method="POST" action="/">
+            <fieldset>
+                <legend>Enter your details</legend>
+                <label for="weight">Weight in kgs:</label>
+                <input type="text" id="weight" name="weight" required><br>
+                <label for="height">Height in cms:</label>
+                <input type="text" id="height" name="height" required><br>
+                <button type="submit" class="pure-button pure-button-primary" value="submit">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+    <br>
+    <div>
+        {% if bmi %}
+            <p>Your BMI is {{ bmi }}</p>
+        {% endif %}
+    </div>
+    <br>
+</body>
+</html>
